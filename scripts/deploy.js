@@ -19,7 +19,7 @@ async function main() {
 
   await vehicle.deployed();
 
-  console.log("Greeter deployed to:", vehicle.address);
+  console.log("Vehicle History Dapp deployed to:", vehicle.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

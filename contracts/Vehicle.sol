@@ -6,10 +6,10 @@ import "hardhat/console.sol";
 contract Vehicle {
     
     string private vin;
-    string private make;
-    string private model;
-    uint64 private year;
-    string private color;
+    string public make;
+    string public model;
+    uint64 public year;
+    string public color;
 
     struct vehicleInfo {
         string vin;
@@ -59,6 +59,10 @@ contract Vehicle {
         anEvent.day = 15;
         anEvent.description = 'Created new ledger';
         serviceHistory.push(anEvent);
+    }
+
+    function getVin() public view returns (string memory) {
+        return vin;
     }
 
     //set color function
